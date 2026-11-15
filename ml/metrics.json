@@ -1,0 +1,62 @@
+{
+  "trained_on": "dair-ai/emotion (Hugging Face)",
+  "train_size": 16000,
+  "test_size": 2000,
+  "accuracy": 0.8625,
+  "report": {
+    "anger": {
+      "precision": 0.8976377952755905,
+      "recall": 0.8290909090909091,
+      "f1-score": 0.8620037807183365,
+      "support": 275.0
+    },
+    "fear": {
+      "precision": 0.8793969849246231,
+      "recall": 0.78125,
+      "f1-score": 0.8274231678486997,
+      "support": 224.0
+    },
+    "joy": {
+      "precision": 0.8491547464239272,
+      "recall": 0.939568345323741,
+      "f1-score": 0.8920765027322405,
+      "support": 695.0
+    },
+    "love": {
+      "precision": 0.7692307692307693,
+      "recall": 0.6289308176100629,
+      "f1-score": 0.6920415224913494,
+      "support": 159.0
+    },
+    "sadness": {
+      "precision": 0.8916666666666667,
+      "recall": 0.9208261617900172,
+      "f1-score": 0.9060118543607113,
+      "support": 581.0
+    },
+    "surprise": {
+      "precision": 0.7083333333333334,
+      "recall": 0.5151515151515151,
+      "f1-score": 0.5964912280701754,
+      "support": 66.0
+    },
+    "accuracy": 0.8625,
+    "macro avg": {
+      "precision": 0.8325700493091516,
+      "recall": 0.7691362914943743,
+      "f1-score": 0.7960080093702522,
+      "support": 2000.0
+    },
+    "weighted avg": {
+      "precision": 0.8605569463647791,
+      "recall": 0.8625,
+      "f1-score": 0.8590914546034439,
+      "support": 2000.0
+    }
+  },
+  "options": {
+    "min_df": 2,
+    "class_weight": null,
+    "char_ngrams": false
+  }
+}
