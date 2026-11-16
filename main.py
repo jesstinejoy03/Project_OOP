@@ -36,10 +36,11 @@ def show_startup_error(message: str) -> None:
 def main() -> int:
     enable_high_dpi()
     try:
+        config.DB_PATH.parent.mkdir(parents=True, exist_ok=True)
         database = DatabaseManager(config.DB_PATH)
         classifier = EmotionClassifier()
         classifier.load()          # raises if the real model has not been trained
-    except (DatabaseError, ClassifierError) as exc:
+    except (DatabaseError, ClassifierError, OSError) as exc:
         show_startup_error(str(exc))
         return 1
 

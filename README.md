@@ -24,6 +24,18 @@ exercise that you can run inside the app. Entries are stored in SQLite.
    python main.py
    ```
 
+### Windows executable
+To build a standalone Windows executable, install PyInstaller and run this from
+the project folder:
+```
+python -m pip install pyinstaller
+python -m PyInstaller --noconfirm --clean --onefile --windowed --name MoodJournal --add-data "ml;ml" main.py
+```
+The executable is created at `dist\MoodJournal.exe`. When packaged, the journal
+database is stored in `%LOCALAPPDATA%\MoodJournal` so entries persist between runs.
+A prebuilt binary is also provided at `downloads/MoodJournal.exe` using Git LFS;
+after cloning, install Git LFS and run `git lfs pull` to download it.
+
 ### Training options
 ```
 python -m ml.train_model                       # dair-ai/emotion (86% test accuracy)
